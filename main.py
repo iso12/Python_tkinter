@@ -8,7 +8,17 @@ from kivymd.uix.screen import Screen
 
 class Mobil_App(MDApp):
     def build(self):
-        screen = Screen()
+        #yazının rəng çları}--------------------------\
+        self.theme_cls.primary_palette="Yellow"# <----|
+
+        #yazının şrifdi}-------------------------\
+        self.theme_cls.primary_hue="A700"# <-----|
+
+        #arxa fon rəng}------------------------\
+        self.theme_cls.theme_style="Dark"# <---|
+
+        # dəyişən yaradıb həmin dəyişəni ekran funksiyasına yönəltmək}---\
+        screen = Screen()#  <--------------------------------------------|
         label = MDLabel(
             text='uran',
             halign='center',
@@ -17,7 +27,8 @@ class Mobil_App(MDApp):
                 236 / 255.0,
                 98 / 255.0,
                 81 / 255, 1
-            )
+            ),
+            font_style='Caption'
         )
 
         button = MDRectangleFlatButton(text='configuration', pos_hint={'center_x':0.5, 'center_y':0.4})
